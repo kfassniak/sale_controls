@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sale Itens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sale_itens.each do |sale_iten| %>
+      <tr>
+        <td><%= link_to 'Show', sale_iten %></td>
+        <td><%= link_to 'Edit', edit_sale_iten_path(sale_iten) %></td>
+        <td><%= link_to 'Destroy', sale_iten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sale iten', new_sale_iten_path %>
